@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.14</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.luas</groupId>
+    <artifactId>project_end</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>project_end</name>
+    <description>project_end</description>
+    <modules>
+        <module>project_common</module>
+        <module>project_pojo</module>
+        <module>project_server</module>
+    </modules>
+    <properties>
+        <java.version>11</java.version>
+        <mybatis.spring>2.2.2</mybatis.spring>
+        <druid>1.2.17</druid>
+        <mysql>8.1.0</mysql>
+        <md5>2.3.0</md5>
+        <jackson-core>2.13.0</jackson-core>
+        <jackson-databind>2.13.4.1</jackson-databind>
+        <captcha>1.6.2</captcha>
+        <redis>2.7.11</redis>
+        <jjwt>0.9.1</jjwt>
+    </properties>
+
+   <dependencyManagement>
+       <dependencies>
+           <dependency>
+               <groupId>com.alibaba</groupId>
+               <artifactId>druid-spring-boot-starter</artifactId>
+               <version>${druid}</version>
+           </dependency>
+           <dependency>
+               <groupId>org.mybatis.spring.boot</groupId>
+               <artifactId>mybatis-spring-boot-starter</artifactId>
+               <version>${mybatis.spring}</version>
+           </dependency>
+           <dependency>
+               <groupId>com.mysql</groupId>
+               <artifactId>mysql-connector-j</artifactId>
+               <version>${mysql}</version>
+           </dependency>
+           <dependency>
+               <groupId>org.webjars.npm</groupId>
+               <artifactId>md5</artifactId>
+               <version>${md5}</version>
+           </dependency>
+
+           <!-- Jackson Core -->
+           <dependency>
+               <groupId>com.fasterxml.jackson.core</groupId>
+               <artifactId>jackson-core</artifactId>
+               <version>${jackson-core}</version>
+           </dependency>
+
+           <!-- Jackson Databind (ObjectMapper) -->
+           <dependency>
+               <groupId>com.fasterxml.jackson.core</groupId>
+               <artifactId>jackson-databind</artifactId>
+               <version>${jackson-databind}</version>
+           </dependency>
+
+           <!--验证码-->
+           <dependency>
+               <groupId>com.github.whvcse</groupId>
+               <artifactId>easy-captcha</artifactId>
+               <version>${captcha}</version>
+           </dependency>
+
+           <!--Redis-->
+           <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-data-redis</artifactId>
+               <version>${redis}</version>
+           </dependency>
+
+           <dependency>
+               <groupId>io.jsonwebtoken</groupId>
+               <artifactId>jjwt</artifactId>
+               <version>${jjwt}</version>
+           </dependency>
+
+       </dependencies>
+   </dependencyManagement>
+
+
+</project>
